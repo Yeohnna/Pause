@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 52 76% 93%; /* #EDEACB - 米白色背景 */
+    --foreground: 142 74% 6%; /* #113625 - 深绿色文字 */
+    --card: 52 76% 93%;
+    --card-foreground: 142 74% 6%;
+    --popover: 52 76% 93%;
+    --popover-foreground: 142 74% 6%;
+    --primary: 75 23% 45%; /* #7E9456 - 橄榄绿主色 */
+    --primary-foreground: 52 76% 93%;
+    --secondary: 42 38% 85%; /* #E8DDC8 - 浅米色 */
+    --secondary-foreground: 142 74% 6%;
+    --muted: 42 38% 85%;
+    --muted-foreground: 142 45% 25%; /* #2D5A41 - 中绿色 */
+    --accent: 12 45% 64%; /* #CB9185 - 桃红色强调 */
+    --accent-foreground: 52 76% 93%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 52 76% 93%;
+    --border: 75 15% 80%; /* #C9D0B8 - 浅边框 */
+    --input: 75 15% 80%;
+    --ring: 75 23% 45%;
+    --radius: 1rem;
+    --chart-1: 75 23% 45%; /* 橄榄绿 */
+    --chart-2: 142 74% 6%; /* 深绿 */
+    --chart-3: 180 76% 8%; /* #115363 - 深蓝 */
+    --chart-4: 12 45% 64%; /* 桃红 */
+    --chart-5: 52 76% 93%; /* 米白 */
+    
+    /* Sidebar variables */
+    --sidebar-background: 52 76% 93%;
+    --sidebar-foreground: 142 74% 6%;
+    --sidebar-primary: 75 23% 45%;
+    --sidebar-primary-foreground: 52 76% 93%;
+    --sidebar-accent: 12 45% 64%;
+    --sidebar-accent-foreground: 52 76% 93%;
+    --sidebar-border: 75 15% 80%;
+    --sidebar-ring: 75 23% 45%;
+  }
+
+  .dark {
+    --background: 142 74% 6%;
+    --foreground: 52 76% 93%;
+    --card: 142 74% 6%;
+    --card-foreground: 52 76% 93%;
+    --popover: 142 74% 6%;
+    --popover-foreground: 52 76% 93%;
+    --primary: 75 23% 45%;
+    --primary-foreground: 142 74% 6%;
+    --secondary: 142 45% 15%;
+    --secondary-foreground: 52 76% 93%;
+    --muted: 142 45% 15%;
+    --muted-foreground: 75 23% 60%;
+    --accent: 12 45% 64%;
+    --accent-foreground: 142 74% 6%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 52 76% 93%;
+    --border: 142 45% 15%;
+    --input: 142 45% 15%;
+    --ring: 75 23% 45%;
+    
+    --sidebar-background: 142 74% 6%;
+    --sidebar-foreground: 52 76% 93%;
+    --sidebar-primary: 75 23% 45%;
+    --sidebar-primary-foreground: 142 74% 6%;
+    --sidebar-accent: 12 45% 64%;
+    --sidebar-accent-foreground: 142 74% 6%;
+    --sidebar-border: 142 45% 15%;
+    --sidebar-ring: 75 23% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Custom styles for Pause */
+.font-serif {
+  font-family: Georgia, serif;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+}
+
+/* Scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border)) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
